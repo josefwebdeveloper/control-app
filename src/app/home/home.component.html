@@ -1,0 +1,22 @@
+<div class="main-container">
+  <div class="control">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+          Control
+          </mat-panel-title>
+          <mat-panel-description>
+<!--            Currently I am {{panelOpenState ? 'open' : 'closed'}}-->
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="deseases-wrapper">
+          <div  class="all-deseases">
+            <app-desease *ngFor="let disease of diseases" [disease]="disease"></app-desease>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>
